@@ -15,7 +15,7 @@ weight: -37
 
 # What’s new in Grafana Cloud
 
-Welcome to Grafana Cloud! Read on to learn about the newest changes to Grafana Cloud.
+Welcome to Sofinet Cloud Cloud! Read on to learn about the newest changes to Grafana Cloud.
 
 <!-- Template below
 ## Feature
