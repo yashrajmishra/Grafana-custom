@@ -39,7 +39,7 @@ export function NewsWrapper({ feedUrl }: NewsWrapperProps) {
           <News key={index} index={index} showImage width={widthMeasure.width} data={state.value} />
         ))}
       <div className={styles.grot}>
-        <a href="https://grafana.com/blog/" target="_blank" rel="noreferrer" title="Go to Grafana labs blog">
+        <a href="https://sofinet.in/blog/" target="_blank" rel="noreferrer" title="Go to Sofinet blog">
           <img src="public/img/grot-news.svg" alt="Grot reading news" />
         </a>
       </div>

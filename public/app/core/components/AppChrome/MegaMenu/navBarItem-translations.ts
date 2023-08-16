@@ -208,19 +208,22 @@ export function getNavSubTitle(navId: string | undefined) {
     case 'teams':
       return t('nav.teams.subtitle', 'Groups of users that have common dashboard and permission needs');
     case 'plugins':
-      return t('nav.plugins.subtitle', 'Extend the Grafana experience with plugins');
+      return t('nav.plugins.subtitle', 'Extend the Sofinet Cloud experience with plugins');
     case 'org-settings':
       return t('nav.org-settings.subtitle', 'Manage preferences across an organization');
     case 'apikeys':
-      return t('nav.api-keys.subtitle', 'Manage and create API keys that are used to interact with Grafana HTTP APIs');
+      return t(
+        'nav.api-keys.subtitle',
+        'Manage and create API keys that are used to interact with Sofinet Cloud HTTP APIs'
+      );
     case 'serviceaccounts':
-      return t('nav.service-accounts.subtitle', 'Use service accounts to run automated workloads in Grafana');
+      return t('nav.service-accounts.subtitle', 'Use service accounts to run automated workloads in Sofinet Cloud');
     case 'global-users':
-      return t('nav.global-users.subtitle', 'Manage users in Grafana');
+      return t('nav.global-users.subtitle', 'Manage users in Sofinet Cloud');
     case 'global-orgs':
-      return t('nav.global-orgs.subtitle', 'Isolated instances of Grafana running on the same server');
+      return t('nav.global-orgs.subtitle', 'Isolated instances of Sofinet Cloud running on the same server');
     case 'server-settings':
-      return t('nav.server-settings.subtitle', 'View the settings defined in your Grafana config');
+      return t('nav.server-settings.subtitle', 'View the settings defined in your Sofinet Cloud config');
     case 'storage':
       return t('nav.storage.subtitle', 'Manage file storage');
     case 'support-bundles':
@@ -231,7 +234,7 @@ export function getNavSubTitle(navId: string | undefined) {
         'Manage server-wide settings and access to resources such as organizations, users, and licenses'
       );
     case 'apps':
-      return t('nav.apps.subtitle', 'App plugins that extend the Grafana experience');
+      return t('nav.apps.subtitle', 'App plugins that extend the Sofinet Cloud experience');
     case 'monitoring':
       return t('nav.monitoring.subtitle', 'Monitoring and infrastructure apps');
     case 'alerts-and-incidents':

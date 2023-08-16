@@ -307,14 +307,14 @@
       "title": "Alerts & IRM"
     },
     "api-keys": {
-      "subtitle": "Manage and create API keys that are used to interact with Grafana HTTP APIs",
+      "subtitle": "Manage and create API keys that are used to interact with Sofinet Cloud HTTP APIs",
       "title": "API keys"
     },
     "application": {
       "title": "Application (preview)"
     },
     "apps": {
-      "subtitle": "App plugins that extend the Grafana experience",
+      "subtitle": "App plugins that extend the Sofinet Cloud experience",
       "title": "Apps"
     },
     "authentication": {
@@ -371,14 +371,14 @@
       "title": "Frontend"
     },
     "global-orgs": {
-      "subtitle": "Isolated instances of Grafana running on the same server",
+      "subtitle": "Isolated instances of Sofinet Cloud running on the same server",
       "title": "Organizations"
     },
     "global-users": {
-      "subtitle": "Manage users in Grafana",
+      "subtitle": "Manage users in Sofinet Cloud",
       "title": "Users"
     },
-    "grafana-quaderno": {
+    "Grafana-quaderno": {
       "title": "Grafana Quaderno"
     },
     "help": {
@@ -441,7 +441,7 @@
       "title": "Playlists"
     },
     "plugins": {
-      "subtitle": "Extend the Grafana experience with plugins",
+      "subtitle": "Extend the Sofinet Cloud experience with plugins",
       "title": "Plugins"
     },
     "profile/notifications": {
@@ -475,11 +475,11 @@
       "title": "Search dashboards"
     },
     "server-settings": {
-      "subtitle": "View the settings defined in your Grafana config",
+      "subtitle": "View the settings defined in your Sofinet Cloud config",
       "title": "Settings"
     },
     "service-accounts": {
-      "subtitle": "Use service accounts to run automated workloads in Grafana",
+      "subtitle": "Use service accounts to run automated workloads in Sofinet Cloud",
       "title": "Service accounts"
     },
     "sign-out": {
@@ -634,7 +634,7 @@
     "embed": {
       "copy": "Copy to clipboard",
       "html": "Embed HTML",
-      "html-description": "The HTML code below can be pasted and included in another web page. Unless anonymous access is enabled, the user viewing that page need to be signed into Grafana for the graph to load.",
+      "html-description": "The HTML code below can be pasted and included in another web page. Unless anonymous access is enabled, the user viewing that page need to be signed into Sofinet Cloud for the graph to load.",
       "info": "Generate HTML for embedding an iframe with this panel.",
       "time-range": "Current time range",
       "time-range-description": "Transforms the current relative time range to an absolute time range"
@@ -655,7 +655,7 @@
       "info-text": "Create a direct link to this dashboard or panel, customized with the options below.",
       "link-url": "Link URL",
       "render-alert": "Image renderer plugin not installed",
-      "render-instructions": "To render a panel image, you must install the&nbsp;<1>Grafana image renderer plugin</1>. Please contact your Grafana administrator to install the plugin.",
+      "render-instructions": "To render a panel image, you must install the&nbsp;<1>Sofinet Cloud image renderer plugin</1>. Please contact your Sofinet Cloud administrator to install the plugin.",
       "rendered-image": "Direct link rendered image",
       "save-alert": "Dashboard is not saved",
       "save-dashboard": "To render a panel image, you must save the dashboard first.",

@@ -4,7 +4,6 @@ import AutoSizer from 'react-virtualized-auto-sizer';
 
 import { PanelPlugin, GrafanaTheme2, FeatureState } from '@grafana/data';
 import { Stack } from '@grafana/experimental';
-import { config } from '@grafana/runtime';
 import {
   Drawer,
   Tab,
@@ -22,9 +21,7 @@ import {
   ClipboardButton,
   Icon,
 } from '@grafana/ui';
-import { contextSrv } from 'app/core/services/context_srv';
 import { PanelModel } from 'app/features/dashboard/state';
-import { AccessControlAction } from 'app/types';
 
 import { ShowMessage, SnapshotTab, SupportSnapshotService } from './SupportSnapshotService';
 
@@ -65,10 +62,6 @@ export function HelpWizard({ panel, plugin, onClose }: Props) {
     { label: 'Data', value: SnapshotTab.Data },
   ];
 
-  const hasSupportBundleAccess =
-    config.supportBundlesEnabled &&
-    contextSrv.hasAccess(AccessControlAction.ActionSupportBundlesCreate, contextSrv.isGrafanaAdmin);
-
   return (
     <Drawer
       title={`Get help with this panel`}
@@ -80,7 +73,7 @@ export function HelpWizard({ panel, plugin, onClose }: Props) {
           <Stack direction="row" gap={1}>
             <FeatureBadge featureState={FeatureState.beta} />
             <a
-              href="https://grafana.com/docs/grafana/latest/troubleshooting/"
+              href="https://sofinet.in/docs/latest/troubleshooting/"
               target="blank"
               className="external-link"
               rel="noopener noreferrer"
@@ -89,15 +82,9 @@ export function HelpWizard({ panel, plugin, onClose }: Props) {
             </a>
           </Stack>
           <span className="muted">
-            To request troubleshooting help, send a snapshot of this panel to Grafana Labs Technical Support. The
+            To request troubleshooting help, send a snapshot of this panel to Sofinet Cloud Technical Support. The
             snapshot contains query response data and panel settings.
           </span>
-          {hasSupportBundleAccess && (
-            <span className="muted">
-              You can also retrieve a support bundle containing information concerning your Grafana instance and
-              configured datasources in the <a href="/support-bundles">support bundles section</a>.
-            </span>
-          )}
         </Stack>
       }
       tabs={

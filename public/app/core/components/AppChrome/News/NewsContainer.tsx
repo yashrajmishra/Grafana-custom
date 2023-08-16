@@ -27,10 +27,10 @@ export function NewsContainer({ className }: NewsContainerProps) {
             <div className={styles.title}>
               <Text element="h3">{t('news.title', 'Latest from the blog')}</Text>
               <a
-                href="https://grafana.com/blog/"
+                href="https://sofinet.in/blog/"
                 target="_blank"
                 rel="noreferrer"
-                title="Go to Grafana labs blog"
+                title="Go to Sofinet blog"
                 className={styles.grot}
               >
                 <img src="public/img/grot-news.svg" alt="Grot reading news" />

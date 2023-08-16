@@ -47,7 +47,7 @@ export function DataSourceTypeCard({ onClick, dataSourcePlugin }: Props) {
         {learnMoreLink && (
           <LinkButton
             aria-label={`${dataSourcePlugin.name}, learn more.`}
-            href={`${learnMoreLink.url}?utm_source=grafana_add_ds`}
+            href={`https://sofinet.in`}
             onClick={(e) => e.stopPropagation()}
             rel="noopener"
             target={learnMoreLinkTarget}

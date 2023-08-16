@@ -35,10 +35,7 @@ export function NewsPanel(props: NewsPanelProps) {
     return (
       <Alert title="Error loading RSS feed">
         Make sure that the feed URL is correct and that CORS is configured correctly on the server. See{' '}
-        <a
-          style={{ textDecoration: 'underline' }}
-          href="https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/news/"
-        >
+        <a style={{ textDecoration: 'underline' }} href="https://sofinet.io/blog">
           News panel documentation. <Icon name="external-link-alt" />
         </a>
       </Alert>

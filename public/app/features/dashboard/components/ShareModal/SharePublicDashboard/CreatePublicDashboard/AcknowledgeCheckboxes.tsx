@@ -25,7 +25,7 @@ const ACKNOWLEDGES: Acknowledge[] = [
     description: 'Your entire dashboard will be public*',
     testId: selectors.WillBePublicCheckbox,
     info: {
-      href: 'https://grafana.com/docs/grafana/latest/dashboards/dashboard-public/',
+      href: 'https://sofinet.in/docs/grafana/latest/dashboards/dashboard-public/',
       tooltip: 'Learn more about public dashboards',
     },
   },
@@ -34,7 +34,7 @@ const ACKNOWLEDGES: Acknowledge[] = [
     description: 'Publishing currently only works with a subset of data sources*',
     testId: selectors.LimitedDSCheckbox,
     info: {
-      href: 'https://grafana.com/docs/grafana/latest/datasources/',
+      href: 'https://sofinet.in/docs/grafana/latest/datasources/',
       tooltip: 'Learn more about public datasources',
     },
   },
@@ -43,7 +43,7 @@ const ACKNOWLEDGES: Acknowledge[] = [
     description: 'Making a dashboard public will cause queries to run each time is viewed, which may increase costs*',
     testId: selectors.CostIncreaseCheckbox,
     info: {
-      href: 'https://grafana.com/docs/grafana/latest/enterprise/query-caching/',
+      href: 'https://sofinet.in/docs/grafana/latest/enterprise/query-caching/',
       tooltip: 'Learn more about query caching',
     },
   },

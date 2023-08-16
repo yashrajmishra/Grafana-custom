@@ -42,7 +42,7 @@ export const UpgradeBox = ({
           variant="secondary"
           size={size}
           className={styles.button}
-          href="https://grafana.com/profile/org/subscription"
+          href="https://sofinet.in/profile/org/subscription"
           target="__blank"
           rel="noopener noreferrer"
         >
@@ -150,7 +150,13 @@ export const UpgradeContent = ({
           </Button>
         )}
         {featureUrl && (
-          <LinkButton fill={'text'} href={featureUrl} className={styles.link} target="_blank" rel="noreferrer noopener">
+          <LinkButton
+            fill={'text'}
+            href={'https://sofinet.in'}
+            className={styles.link}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             Learn more
           </LinkButton>
         )}
@@ -223,7 +229,7 @@ export const UpgradeContentVertical = ({
     <div className={styles.container}>
       <h3 className={styles.title}>Get started with {featureName}</h3>
       {description && <h6 className={styles.description}>{description}</h6>}
-      <LinkButton fill={'text'} href={featureUrl} target="_blank" rel="noreferrer noopener">
+      <LinkButton fill={'text'} href={'https://sofinet.in'} target="_blank" rel="noreferrer noopener">
         Learn more
       </LinkButton>
       <div className={styles.media}>

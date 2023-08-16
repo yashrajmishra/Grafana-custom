@@ -163,7 +163,7 @@ export class TeamGroupSync extends PureComponent<Props, State> {
               buttonTitle="Add group"
               proTip={headerTooltip}
               proTipLinkTitle="Learn more"
-              proTipLink="https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/"
+              proTipLink="https://sofinet.in/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/"
               proTipTarget="_blank"
               buttonDisabled={isReadOnly}
             />
@@ -198,7 +198,7 @@ export const TeamSyncUpgradeContent = ({ action }: { action?: UpgradeContentProp
       ]}
       image={`team-sync-${theme.isLight ? 'light' : 'dark'}.png`}
       featureName={'team sync'}
-      featureUrl={'https://grafana.com/docs/grafana/latest/enterprise/team-sync'}
+      featureUrl={'https://sofinet.in/docs/grafana/latest/enterprise/team-sync'}
       description={
         'Team Sync makes it easier for you to manage users’ access in Grafana, by immediately updating each user’s Grafana teams and permissions based on their single sign-on group membership, instead of when users sign in.'
       }

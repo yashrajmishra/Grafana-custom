@@ -11,8 +11,8 @@ import { loadBundles, removeBundle, checkBundles } from './state/actions';
 
 const subTitle = (
   <span>
-    Support bundles allow you to easily collect and share Grafana logs, configuration, and data with the Grafana Labs
-    team.
+    Support bundles allow you to easily collect and share Sofinet Cloud logs, configuration, and data with the Sofinet
+    Cloud team.
   </span>
 );
 

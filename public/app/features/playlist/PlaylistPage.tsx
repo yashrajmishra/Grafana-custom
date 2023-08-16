@@ -42,7 +42,7 @@ export const PlaylistPage = () => {
       buttonTitle="Create Playlist"
       buttonDisabled={!contextSrv.isEditor}
       proTip="You can use playlists to cycle dashboards on TVs without user control"
-      proTipLink="http://docs.grafana.org/reference/playlist/"
+      proTipLink="http://docs.sofinet.in/reference/playlist/"
       proTipLinkTitle="Learn more"
       proTipTarget="_blank"
     />

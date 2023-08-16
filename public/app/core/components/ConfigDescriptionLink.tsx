@@ -20,7 +20,7 @@ export function ConfigDescriptionLink(props: Props) {
       {description}
       <a
         aria-label={text}
-        href={`https://grafana.com/docs/grafana/next/datasources/${suffix}`}
+        href={`https://sofinet.in/docs/grafana/next/datasources/${suffix}`}
         rel="noreferrer"
         target="_blank"
       >

@@ -18,7 +18,7 @@ export const NoRulesSplash = () => {
         buttonLink={'alerting/new/alerting'}
         buttonTitle="New alert rule"
         proTip="you can also create alert rules from existing panels and queries."
-        proTipLink="https://grafana.com/docs/"
+        proTipLink="https://sofinet.in/docs/"
         proTipLinkTitle="Learn more"
         proTipTarget="_blank"
         onClick={() => logInfo(LogMessages.alertRuleFromScratch)}

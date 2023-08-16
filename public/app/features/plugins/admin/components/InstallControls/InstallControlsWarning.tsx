@@ -7,7 +7,6 @@ import { HorizontalGroup, Icon, LinkButton, useStyles2 } from '@grafana/ui';
 import { contextSrv } from 'app/core/core';
 import { AccessControlAction } from 'app/types';
 
-import { getExternalManageLink } from '../../helpers';
 import { isGrafanaAdmin } from '../../permissions';
 import { useIsRemotePluginsAvailable } from '../../state/hooks';
 import { CatalogPlugin, PluginStatus, Version } from '../../types';
@@ -36,9 +35,9 @@ export const InstallControlsWarning = ({ plugin, pluginStatus, latestCompatibleV
   if (plugin.isEnterprise && !featureEnabled('enterprise.plugins')) {
     return (
       <HorizontalGroup height="auto" align="center">
-        <span className={styles.message}>No valid Grafana Enterprise license detected.</span>
+        <span className={styles.message}>No valid Sofinet Cloud Enterprise license detected.</span>
         <LinkButton
-          href={`${getExternalManageLink(plugin.id)}?utm_source=grafana_catalog_learn_more`}
+          href={`https://sofinet.in?utm_source=grafana_catalog_learn_more`}
           target="_blank"
           rel="noopener noreferrer"
           size="sm"

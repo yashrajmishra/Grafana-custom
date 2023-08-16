@@ -1,9 +1,7 @@
 import React from 'react';
 
 import { LinkTarget } from '@grafana/data';
-import { config } from '@grafana/runtime';
 import { Icon, IconName } from '@grafana/ui';
-import { t } from 'app/core/internationalization';
 
 export interface FooterLink {
   target: LinkTarget;
@@ -18,23 +16,16 @@ export let getFooterLinks = (): FooterLink[] => {
     {
       target: '_blank',
       id: 'home',
-      text: t('nav.help/documentation', 'Home'),
+      text: 'Home',
       icon: 'home',
       url: 'https://sofinet.in',
     },
     {
       target: '_blank',
       id: 'support',
-      text: t('nav.help/support', 'Support'),
+      text: 'Support',
       icon: 'question-circle',
       url: 'mailto:support@sofinet.in',
-    },
-    {
-      target: '_blank',
-      id: 'community',
-      text: t('nav.help/community', 'Community'),
-      icon: 'comments-alt',
-      url: 'https://community.grafana.com/?utm_source=grafana_footer',
     },
   ];
 };
@@ -48,34 +39,6 @@ export function getVersionMeta(version: string) {
   };
 }
 
-export function getVersionLinks(): FooterLink[] {
-  const { buildInfo, licenseInfo } = config;
-  const links: FooterLink[] = [];
-  const stateInfo = licenseInfo.stateInfo ? ` (${licenseInfo.stateInfo})` : '';
-
-  links.push({
-    target: '_blank',
-    id: 'license',
-    text: `${buildInfo.edition}${stateInfo}`,
-    url: licenseInfo.licenseUrl,
-  });
-
-  if (buildInfo.hideVersion) {
-    return links;
-  }
-
-  const { hasReleaseNotes } = getVersionMeta(buildInfo.version);
-
-  links.push({
-    target: '_blank',
-    id: 'version',
-    text: `v${buildInfo.version} (${buildInfo.commit})`,
-    url: hasReleaseNotes ? `https://github.com/grafana/grafana/blob/main/CHANGELOG.md` : undefined,
-  });
-
-  return links;
-}
-
 export function setFooterLinksFn(fn: typeof getFooterLinks) {
   getFooterLinks = fn;
 }
@@ -86,7 +49,7 @@ export interface Props {
 }
 
 export const Footer = React.memo(({ customLinks }: Props) => {
-  const links = (customLinks || getFooterLinks()).concat(getVersionLinks());
+  const links = customLinks || getFooterLinks();
 
   return (
     <footer className="footer">
