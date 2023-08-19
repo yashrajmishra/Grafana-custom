@@ -11,12 +11,12 @@
   ],
   "swagger": "2.0",
   "info": {
-    "description": "The Grafana backend exposes an HTTP API, the same API is used by the frontend to do\neverything from saving dashboards, creating users and updating data sources.",
-    "title": "Grafana HTTP API.",
+    "description": "The Sofinet Cloud backend exposes an HTTP API, the same API is used by the frontend to do\neverything from saving dashboards, creating users and updating data sources.",
+    "title": "Sofinet Cloud HTTP API.",
     "contact": {
-      "name": "Grafana Labs",
-      "url": "https://grafana.com",
-      "email": "hello@grafana.com"
+      "name": "Sofinet Cloud Labs",
+      "url": "https://sofinet.in",
+      "email": "hello@sofinet.in"
     },
     "version": "0.0.1"
   },
@@ -475,7 +475,7 @@
     },
     "/access-control/users/{userId}/roles": {
       "get": {
-        "description": "Lists the roles that have been directly assigned to a given user. The list does not include built-in roles (Viewer, Editor, Admin or Grafana Admin), and it does not include roles that have been inherited from a team.\n\nYou need to have a permission with action `users.roles:read` and scope `users:id:\u003cuser ID\u003e`.",
+        "description": "Lists the roles that have been directly assigned to a given user. The list does not include built-in roles (Viewer, Editor, Admin or Sofinet Cloud Admin), and it does not include roles that have been inherited from a team.\n\nYou need to have a permission with action `users.roles:read` and scope `users:id:\u003cuser ID\u003e`.",
         "tags": [
           "access_control",
           "enterprise"
@@ -670,7 +670,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.config:reload`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.config:reload`.",
         "tags": [
           "admin_ldap"
         ],
@@ -699,7 +699,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.status:read`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.status:read`.",
         "tags": [
           "admin_ldap"
         ],
@@ -728,11 +728,11 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.user:sync`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.user:sync`.",
         "tags": [
           "admin_ldap"
         ],
-        "summary": "Enables a single Grafana user to be synchronized against LDAP.",
+        "summary": "Enables a single Sofinet Cloud user to be synchronized against LDAP.",
         "operationId": "postSyncUserWithLDAP",
         "parameters": [
           {
@@ -766,11 +766,11 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.user:read`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.user:read`.",
         "tags": [
           "admin_ldap"
         ],
-        "summary": "Finds an user based on a username in LDAP. This helps illustrate how would the particular user be mapped in Grafana when synced.",
+        "summary": "Finds an user based on a username in LDAP. This helps illustrate how would the particular user be mapped in Sofinet Cloud when synced.",
         "operationId": "getUserFromLDAP",
         "parameters": [
           {
@@ -862,7 +862,7 @@
             "basic": []
           }
         ],
-        "description": "Reloads the provisioning config files for dashboards again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:dashboards`.",
+        "description": "Reloads the provisioning config files for dashboards again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:dashboards`.",
         "tags": [
           "admin_provisioning"
         ],
@@ -891,7 +891,7 @@
             "basic": []
           }
         ],
-        "description": "Reloads the provisioning config files for datasources again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:datasources`.",
+        "description": "Reloads the provisioning config files for datasources again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:datasources`.",
         "tags": [
           "admin_provisioning"
         ],
@@ -920,7 +920,7 @@
             "basic": []
           }
         ],
-        "description": "Reloads the provisioning config files for legacy alert notifiers again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:notifications`.",
+        "description": "Reloads the provisioning config files for legacy alert notifiers again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:notifications`.",
         "tags": [
           "admin_provisioning"
         ],
@@ -949,7 +949,7 @@
             "basic": []
           }
         ],
-        "description": "Reloads the provisioning config files for plugins again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:plugin`.",
+        "description": "Reloads the provisioning config files for plugins again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:plugin`.",
         "tags": [
           "admin_provisioning"
         ],
@@ -978,7 +978,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `settings:read` and scopes: `settings:*`, `settings:auth.saml:` and `settings:auth.saml:enabled` (property level).",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `settings:read` and scopes: `settings:*`, `settings:auth.saml:` and `settings:auth.saml:enabled` (property level).",
         "tags": [
           "admin"
         ],
@@ -999,11 +999,11 @@
     },
     "/admin/stats": {
       "get": {
-        "description": "Only works with Basic Authentication (username and password). See introduction for an explanation.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `server:stats:read`.",
+        "description": "Only works with Basic Authentication (username and password). See introduction for an explanation.\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `server:stats:read`.",
         "tags": [
           "admin"
         ],
-        "summary": "Fetch Grafana Stats.",
+        "summary": "Fetch Sofinet Cloud Stats.",
         "operationId": "adminGetStats",
         "responses": {
           "200": {
@@ -1028,7 +1028,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:create`.\nNote that OrgId is an optional parameter that can be used to assign a new user to a different organization when `auto_assign_org` is set to `true`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:create`.\nNote that OrgId is an optional parameter that can be used to assign a new user to a different organization when `auto_assign_org` is set to `true`.",
         "tags": [
           "admin_users"
         ],
@@ -1073,7 +1073,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:delete` and scope `global.users:*`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:delete` and scope `global.users:*`.",
         "tags": [
           "admin_users"
         ],
@@ -1114,7 +1114,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:list` and scope `global.users:*`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:list` and scope `global.users:*`.",
         "tags": [
           "admin_users"
         ],
@@ -1152,7 +1152,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:disable` and scope `global.users:1` (userIDScope).",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:disable` and scope `global.users:1` (userIDScope).",
         "tags": [
           "admin_users"
         ],
@@ -1193,7 +1193,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:enable` and scope `global.users:1` (userIDScope).",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:enable` and scope `global.users:1` (userIDScope).",
         "tags": [
           "admin_users"
         ],
@@ -1234,7 +1234,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.logout` and scope `global.users:*`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.logout` and scope `global.users:*`.",
         "tags": [
           "admin_users"
         ],
@@ -1278,7 +1278,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.password:update` and scope `global.users:*`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.password:update` and scope `global.users:*`.",
         "tags": [
           "admin_users"
         ],
@@ -1322,7 +1322,7 @@
     },
     "/admin/users/{user_id}/permissions": {
       "put": {
-        "description": "Only works with Basic Authentication (username and password). See introduction for an explanation.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.permissions:update` and scope `global.users:*`.",
+        "description": "Only works with Basic Authentication (username and password). See introduction for an explanation.\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.permissions:update` and scope `global.users:*`.",
         "tags": [
           "admin_users"
         ],
@@ -1371,7 +1371,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:list` and scope `global.users:1` (userIDScope).",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:list` and scope `global.users:1` (userIDScope).",
         "tags": [
           "admin_users"
         ],
@@ -1412,7 +1412,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:update` and scope `global.users:1` (userIDScope).",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:update` and scope `global.users:1` (userIDScope).",
         "tags": [
           "admin_users"
         ],
@@ -1467,7 +1467,7 @@
             "basic": []
           }
         ],
-        "description": "Revokes the given auth token (device) for the user. User of issued auth token (device) will no longer be logged in and will be required to authenticate again upon next activity.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:update` and scope `global.users:*`.",
+        "description": "Revokes the given auth token (device) for the user. User of issued auth token (device) will no longer be logged in and will be required to authenticate again upon next activity.\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:update` and scope `global.users:*`.",
         "tags": [
           "admin_users"
         ],
@@ -1536,7 +1536,7 @@
         }
       },
       "post": {
-        "description": "You can find the full list of [supported notifiers](https://grafana.com/docs/grafana/latest/alerting/old-alerting/notifications/#list-of-supported-notifiers) on the alert notifiers page.",
+        "description": "You can find the full list of [supported notifiers](https://sofinet.in/docs/latest/alerting/old-alerting/notifications/#list-of-supported-notifiers) on the alert notifiers page.",
         "tags": [
           "legacy_alerts_notification_channels"
         ],
@@ -1573,7 +1573,7 @@
     },
     "/alert-notifications/lookup": {
       "get": {
-        "description": "Returns all notification channels, but with less detailed information. Accessible by any authenticated user and is mainly used by providing alert notification channels in Grafana UI when configuring alert rule.",
+        "description": "Returns all notification channels, but with less detailed information. Accessible by any authenticated user and is mainly used by providing alert notification channels in Sofinet Cloud UI when configuring alert rule.",
         "tags": [
           "legacy_alerts_notification_channels"
         ],
@@ -2085,7 +2085,7 @@
     },
     "/annotations": {
       "get": {
-        "description": "Starting in Grafana v6.4 regions annotations are now returned in one entity that now includes the timeEnd property.",
+        "description": "Starting in Sofinet Cloud v6.4 regions annotations are now returned in one entity that now includes the timeEnd property.",
         "tags": [
           "annotations"
         ],
@@ -2187,7 +2187,7 @@
         }
       },
       "post": {
-        "description": "Creates an annotation in the Grafana database. The dashboardId and panelId fields are optional. If they are not specified then an organization annotation is created and can be queried in any dashboard that adds the Grafana annotations data source. When creating a region annotation include the timeEnd property.\nThe format for `time` and `timeEnd` should be epoch numbers in millisecond resolution.\nThe response for this HTTP request is slightly different in versions prior to v6.4. In prior versions you would also get an endId if you where creating a region. But in 6.4 regions are represented using a single event with time and timeEnd properties.",
+        "description": "Creates an annotation in the Sofinet Cloud database. The dashboardId and panelId fields are optional. If they are not specified then an organization annotation is created and can be queried in any dashboard that adds the Sofinet Cloud annotations data source. When creating a region annotation include the timeEnd property.\nThe format for `time` and `timeEnd` should be epoch numbers in millisecond resolution.\nThe response for this HTTP request is slightly different in versions prior to v6.4. In prior versions you would also get an endId if you where creating a region. But in 6.4 regions are represented using a single event with time and timeEnd properties.",
         "tags": [
           "annotations"
         ],
@@ -2424,7 +2424,7 @@
         }
       },
       "patch": {
-        "description": "Updates one or more properties of an annotation that matches the specified ID.\nThis operation currently supports updating of the `text`, `tags`, `time` and `timeEnd` properties.\nThis is available in Grafana 6.0.0-beta2 and above.",
+        "description": "Updates one or more properties of an annotation that matches the specified ID.\nThis operation currently supports updating of the `text`, `tags`, `time` and `timeEnd` properties.\nThis is available in Sofinet Cloud 6.0.0-beta2 and above.",
         "tags": [
           "annotations"
         ],
@@ -3351,7 +3351,7 @@
     },
     "/auth/keys": {
       "get": {
-        "description": "Will return auth keys.\n\nDeprecated: true.\n\nDeprecated. Please use GET /api/serviceaccounts and GET /api/serviceaccounts/{id}/tokens instead\nsee https://grafana.com/docs/grafana/next/administration/api-keys/#migrate-api-keys-to-grafana-service-accounts-using-the-api.",
+        "description": "Will return auth keys.\n\nDeprecated: true.\n\nDeprecated. Please use GET /api/serviceaccounts and GET /api/serviceaccounts/{id}/tokens instead\nsee https://sofinet.in/docs/next/administration/api-keys/#migrate-api-keys-to-grafana-service-accounts-using-the-api.",
         "tags": [
           "api_keys"
         ],
@@ -3426,7 +3426,7 @@
     },
     "/auth/keys/{id}": {
       "delete": {
-        "description": "Deletes an API key.\nDeprecated. See: https://grafana.com/docs/grafana/next/administration/api-keys/#migrate-api-keys-to-grafana-service-accounts-using-the-api.",
+        "description": "Deletes an API key.\nDeprecated. See: https://sofinet.in/docs/next/administration/api-keys/#migrate-api-keys-to-grafana-service-accounts-using-the-api.",
         "tags": [
           "api_keys"
         ],
@@ -4192,7 +4192,7 @@
     },
     "/datasources": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scope: `datasources:*`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scope: `datasources:*`.",
         "tags": [
           "datasources"
         ],
@@ -4214,7 +4214,7 @@
         }
       },
       "post": {
-        "description": "By defining `password` and `basicAuthPassword` under secureJsonData property\nGrafana encrypts them securely as an encrypted blob in the database.\nThe response then lists the encrypted fields under secureJsonFields.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:create`",
+        "description": "By defining `password` and `basicAuthPassword` under secureJsonData property\nGrafana encrypts them securely as an encrypted blob in the database.\nThe response then lists the encrypted fields under secureJsonFields.\n\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:create`",
         "tags": [
           "datasources"
         ],
@@ -4303,7 +4303,7 @@
     },
     "/datasources/id/{name}": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
         "tags": [
           "datasources"
         ],
@@ -4338,7 +4338,7 @@
     },
     "/datasources/name/{name}": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
         "tags": [
           "datasources"
         ],
@@ -4368,7 +4368,7 @@
         }
       },
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
         "tags": [
           "datasources"
         ],
@@ -4839,7 +4839,7 @@
     },
     "/datasources/uid/{uid}": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).",
         "tags": [
           "datasources"
         ],
@@ -4875,7 +4875,7 @@
         }
       },
       "put": {
-        "description": "Similar to creating a data source, `password` and `basicAuthPassword` should be defined under\nsecureJsonData in order to be stored securely as an encrypted blob in the database. Then, the\nencrypted fields are listed under secureJsonFields section in the response.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:1` (single data source).",
+        "description": "Similar to creating a data source, `password` and `basicAuthPassword` should be defined under\nsecureJsonData in order to be stored securely as an encrypted blob in the database. Then, the\nencrypted fields are listed under secureJsonFields section in the response.\n\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:1` (single data source).",
         "tags": [
           "datasources"
         ],
@@ -4913,7 +4913,7 @@
         }
       },
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).",
         "tags": [
           "datasources"
         ],
@@ -5275,7 +5275,7 @@
     },
     "/datasources/{id}": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/getDataSourceByUID) instead",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/getDataSourceByUID) instead",
         "tags": [
           "datasources"
         ],
@@ -5312,7 +5312,7 @@
         }
       },
       "put": {
-        "description": "Similar to creating a data source, `password` and `basicAuthPassword` should be defined under\nsecureJsonData in order to be stored securely as an encrypted blob in the database. Then, the\nencrypted fields are listed under secureJsonFields section in the response.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/updateDataSourceByUID) instead",
+        "description": "Similar to creating a data source, `password` and `basicAuthPassword` should be defined under\nsecureJsonData in order to be stored securely as an encrypted blob in the database. Then, the\nencrypted fields are listed under secureJsonFields section in the response.\n\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/updateDataSourceByUID) instead",
         "tags": [
           "datasources"
         ],
@@ -5351,7 +5351,7 @@
         }
       },
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/deleteDataSourceByUID) instead",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/deleteDataSourceByUID) instead",
         "tags": [
           "datasources"
         ],
@@ -5468,7 +5468,7 @@
     },
     "/ds/query": {
       "post": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:query`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:query`.",
         "tags": [
           "ds"
         ],
@@ -5726,7 +5726,7 @@
           {
             "type": "boolean",
             "default": false,
-            "description": "If `true` any Grafana 8 Alerts under this folder will be deleted.\nSet to `false` so that the request will fail if the folder contains any Grafana 8 Alerts.",
+            "description": "If `true` any Sofinet Cloud 8 Alerts under this folder will be deleted.\nSet to `false` so that the request will fail if the folder contains any Sofinet Cloud 8 Alerts.",
             "name": "forceDeleteRules",
             "in": "query"
           }
@@ -6322,7 +6322,7 @@
         }
       },
       "delete": {
-        "description": "Removes the license stored in the Grafana database. Available in Grafana Enterprise v7.4+.\n\nYou need to have a permission with action `licensing:delete`.",
+        "description": "Removes the license stored in the Sofinet Cloud database. Available in Sofinet Cloud Enterprise v7.4+.\n\nYou need to have a permission with action `licensing:delete`.",
         "tags": [
           "licensing",
           "enterprise"
@@ -6363,7 +6363,7 @@
     },
     "/licensing/token/renew": {
       "post": {
-        "description": "Manually ask license issuer for a new token. Available in Grafana Enterprise v7.4+.\n\nYou need to have a permission with action `licensing:update`.",
+        "description": "Manually ask license issuer for a new token. Available in Sofinet Cloud Enterprise v7.4+.\n\nYou need to have a permission with action `licensing:update`.",
         "tags": [
           "licensing",
           "enterprise"
@@ -6694,7 +6694,7 @@
     },
     "/org/quotas": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:read` and scope `org:id:1` (orgIDScope).",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:read` and scope `org:id:1` (orgIDScope).",
         "tags": [
           "getCurrentOrg"
         ],
@@ -6721,7 +6721,7 @@
     },
     "/org/users": {
       "get": {
-        "description": "Returns all org users within the current organization. Accessible to users with org admin role.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
+        "description": "Returns all org users within the current organization. Accessible to users with org admin role.\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
         "tags": [
           "org"
         ],
@@ -6743,7 +6743,7 @@
         }
       },
       "post": {
-        "description": "Adds a global user to the current organization.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:add` with scope `users:*`.",
+        "description": "Adds a global user to the current organization.\n\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:add` with scope `users:*`.",
         "tags": [
           "org"
         ],
@@ -6777,7 +6777,7 @@
     },
     "/org/users/lookup": {
       "get": {
-        "description": "Returns all org users within the current organization, but with less detailed information.\nAccessible to users with org admin role, admin in any folder or admin of any team.\nMainly used by Grafana UI for providing list of users when adding team members and when editing folder/dashboard permissions.",
+        "description": "Returns all org users within the current organization, but with less detailed information.\nAccessible to users with org admin role, admin in any folder or admin of any team.\nMainly used by Sofinet Cloud UI for providing list of users when adding team members and when editing folder/dashboard permissions.",
         "tags": [
           "org"
         ],
@@ -6814,7 +6814,7 @@
     },
     "/org/users/{user_id}": {
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:remove` with scope `users:*`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:remove` with scope `users:*`.",
         "tags": [
           "org"
         ],
@@ -6848,7 +6848,7 @@
         }
       },
       "patch": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users.role:update` with scope `users:*`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users.role:update` with scope `users:*`.",
         "tags": [
           "org"
         ],
@@ -6949,7 +6949,7 @@
         }
       },
       "post": {
-        "description": "Only works if [users.allow_org_create](https://grafana.com/docs/grafana/latest/administration/configuration/#allow_org_create) is set.",
+        "description": "Only works if [users.allow_org_create](https://sofinet.in/docs/latest/administration/configuration/#allow_org_create) is set.",
         "tags": [
           "orgs"
         ],
@@ -7189,7 +7189,7 @@
     },
     "/orgs/{org_id}/quotas": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:read` and scope `org:id:1` (orgIDScope).",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:read` and scope `org:id:1` (orgIDScope).",
         "tags": [
           "orgs"
         ],
@@ -7230,7 +7230,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:write` and scope `org:id:1` (orgIDScope).",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:write` and scope `org:id:1` (orgIDScope).",
         "tags": [
           "orgs"
         ],
@@ -7285,7 +7285,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
         "tags": [
           "orgs"
         ],
@@ -7316,7 +7316,7 @@
         }
       },
       "post": {
-        "description": "Adds a global user to the current organization.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:add` with scope `users:*`.",
+        "description": "Adds a global user to the current organization.\n\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:add` with scope `users:*`.",
         "tags": [
           "orgs"
         ],
@@ -7362,7 +7362,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
         "tags": [
           "orgs"
         ],
@@ -7395,7 +7395,7 @@
     },
     "/orgs/{org_id}/users/{user_id}": {
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:remove` with scope `users:*`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:remove` with scope `users:*`.",
         "tags": [
           "orgs"
         ],
@@ -7436,7 +7436,7 @@
         }
       },
       "patch": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users.role:update` with scope `users:*`.",
+        "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users.role:update` with scope `users:*`.",
         "tags": [
           "orgs"
         ],
@@ -8293,7 +8293,7 @@
     },
     "/reports/email": {
       "post": {
-        "description": "Generate and send a report. This API waits for the report to be generated before returning. We recommend that you set the client’s timeout to at least 60 seconds. Available to org admins only and with a valid license.\n\nOnly available in Grafana Enterprise v7.0+.\nThis API endpoint is experimental and may be deprecated in a future release. On deprecation, a migration strategy will be provided and the endpoint will remain functional until the next major release of Grafana.\n\nYou need to have a permission with action `reports:send`.",
+        "description": "Generate and send a report. This API waits for the report to be generated before returning. We recommend that you set the client’s timeout to at least 60 seconds. Available to org admins only and with a valid license.\n\nOnly available in Sofinet Cloud Enterprise v7.0+.\nThis API endpoint is experimental and may be deprecated in a future release. On deprecation, a migration strategy will be provided and the endpoint will remain functional until the next major release of Sofinet Cloud.\n\nYou need to have a permission with action `reports:send`.",
         "tags": [
           "reports",
           "enterprise"
@@ -8334,7 +8334,7 @@
     },
     "/reports/render/pdf/{dashboardID}": {
       "get": {
-        "description": "Please refer to [reports enterprise](#/reports/renderReportPDFs) instead. This will be removed in Grafana 10.",
+        "description": "Please refer to [reports enterprise](#/reports/renderReportPDFs) instead. This will be removed in Sofinet Cloud 10.",
         "produces": [
           "application/pdf"
         ],
@@ -8715,7 +8715,7 @@
           "saml",
           "enterprise"
         ],
-        "summary": "It exposes the SP (Grafana's) metadata for the IdP's consumption.",
+        "summary": "It exposes the SP (Sofinet Cloud's) metadata for the IdP's consumption.",
         "operationId": "getMetadata",
         "responses": {
           "200": {
@@ -8726,7 +8726,7 @@
     },
     "/saml/slo": {
       "get": {
-        "description": "There might be two possible requests:\n1. Logout response (callback) when Grafana initiates single logout and IdP returns response to logout request.\n2. Logout request when another SP initiates single logout and IdP sends logout request to the Grafana,\nor in case of IdP-initiated logout.",
+        "description": "There might be two possible requests:\n1. Logout response (callback) when Sofinet Cloud initiates single logout and IdP returns response to logout request.\n2. Logout request when another SP initiates single logout and IdP sends logout request to the Sofinet Cloud,\nor in case of IdP-initiated logout.",
         "tags": [
           "saml",
           "enterprise"
@@ -8749,7 +8749,7 @@
         }
       },
       "post": {
-        "description": "There might be two possible requests:\n1. Logout response (callback) when Grafana initiates single logout and IdP returns response to logout request.\n2. Logout request when another SP initiates single logout and IdP sends logout request to the Grafana,\nor in case of IdP-initiated logout.",
+        "description": "There might be two possible requests:\n1. Logout response (callback) when Sofinet Cloud initiates single logout and IdP returns response to logout request.\n2. Logout request when another SP initiates single logout and IdP sends logout request to the Sofinet Cloud,\nor in case of IdP-initiated logout.",
         "tags": [
           "saml",
           "enterprise"
@@ -8871,7 +8871,7 @@
           {
             "type": "integer",
             "format": "int64",
-            "description": "Use this parameter to access hits beyond limit. Numbering starts at 1. limit param acts as page size. Only available in Grafana v6.2+.",
+            "description": "Use this parameter to access hits beyond limit. Numbering starts at 1. limit param acts as page size. Only available in Sofinet Cloud v6.2+.",
             "name": "page",
             "in": "query"
           },
@@ -8933,7 +8933,7 @@
     },
     "/serviceaccounts": {
       "post": {
-        "description": "Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:write` scope: `serviceaccounts:*`\n\nRequires basic authentication and that the authenticated user is a Grafana Admin.",
+        "description": "Required permissions (See note in the [introduction](https://sofinet.in/docs/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:write` scope: `serviceaccounts:*`\n\nRequires basic authentication and that the authenticated user is a Sofinet Cloud Admin.",
         "tags": [
           "service_accounts"
         ],
@@ -8969,7 +8969,7 @@
     },
     "/serviceaccounts/search": {
       "get": {
-        "description": "Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:read` scope: `serviceaccounts:*`",
+        "description": "Required permissions (See note in the [introduction](https://sofinet.in/docs/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:read` scope: `serviceaccounts:*`",
         "tags": [
           "service_accounts"
         ],
@@ -9025,7 +9025,7 @@
     },
     "/serviceaccounts/{serviceAccountId}": {
       "get": {
-        "description": "Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:read` scope: `serviceaccounts:id:1` (single service account)",
+        "description": "Required permissions (See note in the [introduction](https://sofinet.in/docs/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:read` scope: `serviceaccounts:id:1` (single service account)",
         "tags": [
           "service_accounts"
         ],
@@ -9062,7 +9062,7 @@
         }
       },
       "delete": {
-        "description": "Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:delete` scope: `serviceaccounts:id:1` (single service account)",
+        "description": "Required permissions (See note in the [introduction](https://sofinet.in/docs/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:delete` scope: `serviceaccounts:id:1` (single service account)",
         "tags": [
           "service_accounts"
         ],
@@ -9096,7 +9096,7 @@
         }
       },
       "patch": {
-        "description": "Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:write` scope: `serviceaccounts:id:1` (single service account)",
+        "description": "Required permissions (See note in the [introduction](https://sofinet.in/docs/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:write` scope: `serviceaccounts:id:1` (single service account)",
         "tags": [
           "service_accounts"
         ],
@@ -9142,7 +9142,7 @@
     },
     "/serviceaccounts/{serviceAccountId}/tokens": {
       "get": {
-        "description": "Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:read` scope: `global:serviceaccounts:id:1` (single service account)\n\nRequires basic authentication and that the authenticated user is a Grafana Admin.",
+        "description": "Required permissions (See note in the [introduction](https://sofinet.in/docs/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:read` scope: `global:serviceaccounts:id:1` (single service account)\n\nRequires basic authentication and that the authenticated user is a Sofinet Cloud Admin.",
         "tags": [
           "service_accounts"
         ],
@@ -9176,7 +9176,7 @@
         }
       },
       "post": {
-        "description": "Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:write` scope: `serviceaccounts:id:1` (single service account)",
+        "description": "Required permissions (See note in the [introduction](https://sofinet.in/docs/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:write` scope: `serviceaccounts:id:1` (single service account)",
         "tags": [
           "service_accounts"
         ],
@@ -9225,7 +9225,7 @@
     },
     "/serviceaccounts/{serviceAccountId}/tokens/{tokenId}": {
       "delete": {
-        "description": "Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:write` scope: `serviceaccounts:id:1` (single service account)\n\nRequires basic authentication and that the authenticated user is a Grafana Admin.",
+        "description": "Required permissions (See note in the [introduction](https://sofinet.in/docs/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):\naction: `serviceaccounts:write` scope: `serviceaccounts:id:1` (single service account)\n\nRequires basic authentication and that the authenticated user is a Sofinet Cloud Admin.",
         "tags": [
           "service_accounts"
         ],
@@ -9292,7 +9292,7 @@
         "tags": [
           "snapshots"
         ],
-        "summary": "When creating a snapshot using the API, you have to provide the full dashboard payload including the snapshot data. This endpoint is designed for the Grafana UI.",
+        "summary": "When creating a snapshot using the API, you have to provide the full dashboard payload including the snapshot data. This endpoint is designed for the Sofinet Cloud UI.",
         "operationId": "createDashboardSnapshot",
         "parameters": [
           {
@@ -11401,7 +11401,7 @@
       "title": "AlertQuery represents a single query associated with an alert definition.",
       "properties": {
         "datasourceUid": {
-          "description": "Grafana data source unique identifier; it should be '__expr__' for a Server Side Expression operation.",
+          "description": "Sofinet Cloud data source unique identifier; it should be '__expr__' for a Server Side Expression operation.",
           "type": "string"
         },
         "model": {
@@ -13623,11 +13623,11 @@
           "type": "string"
         },
         "displayName": {
-          "description": "DisplayName overrides Grafana default naming, should not be used from a data source",
+          "description": "DisplayName overrides Sofinet Cloud default naming, should not be used from a data source",
           "type": "string"
         },
         "displayNameFromDS": {
-          "description": "DisplayNameFromDS overrides Grafana default naming strategy.",
+          "description": "DisplayNameFromDS overrides Sofinet Cloud default naming strategy.",
           "type": "string"
         },
         "filterable": {
@@ -13834,7 +13834,7 @@
       }
     },
     "Frame": {
-      "description": "Each Field is well typed by its FieldType and supports optional Labels.\n\nA Frame is a general data container for Grafana. A Frame can be table data\nor time series data depending on its content and field types.",
+      "description": "Each Field is well typed by its FieldType and supports optional Labels.\n\nA Frame is a general data container for Sofinet Cloud. A Frame can be table data\nor time series data depending on its content and field types.",
       "type": "object",
       "title": "Frame is a columnar data structure where each column is a Field.",
       "properties": {
@@ -13849,7 +13849,7 @@
           "$ref": "#/definitions/FrameMeta"
         },
         "Name": {
-          "description": "Name is used in some Grafana visualizations.",
+          "description": "Name is used in some Sofinet Cloud visualizations.",
           "type": "string"
         },
         "RefID": {
@@ -14762,7 +14762,7 @@
           "$ref": "#/definitions/ItemType"
         },
         "value": {
-          "description": "Value depends on type and describes the playlist item.\n\ndashboard_by_id: The value is an internal numerical identifier set by Grafana. This\nis not portable as the numerical identifier is non-deterministic between different instances.\nWill be replaced by dashboard_by_uid in the future. (deprecated)\ndashboard_by_tag: The value is a tag which is set on any number of dashboards. All\ndashboards behind the tag will be added to the playlist.\ndashboard_by_uid: The value is the dashboard UID",
+          "description": "Value depends on type and describes the playlist item.\n\ndashboard_by_id: The value is an internal numerical identifier set by Sofinet Cloud. This\nis not portable as the numerical identifier is non-deterministic between different instances.\nWill be replaced by dashboard_by_uid in the future. (deprecated)\ndashboard_by_tag: The value is a tag which is set on any number of dashboards. All\ndashboards behind the tag will be added to the playlist.\ndashboard_by_uid: The value is the dashboard UID",
           "type": "string"
         }
       }
@@ -15235,7 +15235,7 @@
           "type": "boolean"
         },
         "from": {
-          "description": "From Start time in epoch timestamps in milliseconds or relative using Grafana time units.",
+          "description": "From Start time in epoch timestamps in milliseconds or relative using Sofinet Cloud time units.",
           "type": "string",
           "example": "now-1h"
         },
@@ -15262,7 +15262,7 @@
           ]
         },
         "to": {
-          "description": "To End time in epoch timestamps in milliseconds or relative using Grafana time units.",
+          "description": "To End time in epoch timestamps in milliseconds or relative using Sofinet Cloud time units.",
           "type": "string",
           "example": "now"
         }
@@ -15333,13 +15333,13 @@
     },
     "Notice": {
       "type": "object",
-      "title": "Notice provides a structure for presenting notifications in Grafana's user interface.",
+      "title": "Notice provides a structure for presenting notifications in Sofinet Cloud's user interface.",
       "properties": {
         "inspect": {
           "$ref": "#/definitions/InspectType"
         },
         "link": {
-          "description": "Link is an optional link for display in the user interface and can be an\nabsolute URL or a path relative to Grafana's root url.",
+          "description": "Link is an optional link for display in the user interface and can be an\nabsolute URL or a path relative to Sofinet Cloud's root url.",
           "type": "string"
         },
         "severity": {
@@ -16732,11 +16732,11 @@
           "type": "string"
         },
         "displayName": {
-          "description": "DisplayName overrides Grafana default naming, should not be used from a data source",
+          "description": "DisplayName overrides Sofinet Cloud default naming, should not be used from a data source",
           "type": "string"
         },
         "displayNameFromDS": {
-          "description": "DisplayNameFromDS overrides Grafana default naming strategy.",
+          "description": "DisplayNameFromDS overrides Sofinet Cloud default naming strategy.",
           "type": "string"
         },
         "filterable": {
@@ -21515,11 +21515,11 @@
   ],
   "tags": [
     {
-      "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "datasources"
     },
     {
-      "description": "Folders are identified by the identifier (id) and the unique identifier (uid).\nThe identifier (id) of a folder is an auto-incrementing numeric value and is only unique per Grafana install.\nThe unique identifier (uid) of a folder can be used for uniquely identify folders between multiple Grafana installs. It’s automatically generated if not provided when creating a folder. The uid allows having consistent URLs for accessing folders and when syncing folders between multiple Grafana installs. This means that changing the title of a folder will not break any bookmarked links to that folder.\nThe uid can have a maximum length of 40 characters.\n\nThe General folder (id=0) is special and is not part of the Folder API which means that you cannot use this API for retrieving information about the General folder.",
+      "description": "Folders are identified by the identifier (id) and the unique identifier (uid).\nThe identifier (id) of a folder is an auto-incrementing numeric value and is only unique per Sofinet Cloud install.\nThe unique identifier (uid) of a folder can be used for uniquely identify folders between multiple Sofinet Cloud installs. It’s automatically generated if not provided when creating a folder. The uid allows having consistent URLs for accessing folders and when syncing folders between multiple Sofinet Cloud installs. This means that changing the title of a folder will not break any bookmarked links to that folder.\nThe uid can have a maximum length of 40 characters.\n\nThe General folder (id=0) is special and is not part of the Folder API which means that you cannot use this API for retrieving information about the General folder.",
       "name": "folders"
     },
     {
@@ -21527,35 +21527,35 @@
       "name": "folder_permissions"
     },
     {
-      "description": "The Admin HTTP API does not currently work with an API Token. API Tokens are currently only linked to an organization and an organization role. They cannot be given the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the Grafana user must have the Grafana Admin permission. (The default admin user is called admin and has permission to use this API.)",
+      "description": "The Admin HTTP API does not currently work with an API Token. API Tokens are currently only linked to an organization and an organization role. They cannot be given the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the Sofinet Cloud user must have the Sofinet Cloud Admin permission. (The default admin user is called admin and has permission to use this API.)",
       "name": "admin"
     },
     {
-      "description": "You can use the Alerting API to get information about legacy dashboard alerts and their states but this API cannot be used to modify the alert. To create new alerts or modify them you need to update the dashboard JSON that contains the alerts.\nThis topic is relevant for the legacy dashboard alerts only.\nYou can find Grafana 8 alerts API specification details [here](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/pkg/services/ngalert/api/tooling/post.json).",
+      "description": "You can use the Alerting API to get information about legacy dashboard alerts and their states but this API cannot be used to modify the alert. To create new alerts or modify them you need to update the dashboard JSON that contains the alerts.\nThis topic is relevant for the legacy dashboard alerts only.\nYou can find Sofinet Cloud 8 alerts API specification details [here](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/pkg/services/ngalert/api/tooling/post.json).",
       "name": "legacy_alerts"
     },
     {
-      "description": "The identifier (id) of a notification channel is an auto-incrementing numeric value and is only unique per Grafana install.\nThe unique identifier (uid) of a notification channel can be used for uniquely identify a notification channel between multiple Grafana installs. It’s automatically generated if not provided when creating a notification channel. The uid allows having consistent URLs for accessing notification channels and when syncing notification channels between multiple Grafana installations, refer to alert notification channel provisioning.\nThe uid can have a maximum length of 40 characters.",
+      "description": "The identifier (id) of a notification channel is an auto-incrementing numeric value and is only unique per Sofinet Cloud install.\nThe unique identifier (uid) of a notification channel can be used for uniquely identify a notification channel between multiple Sofinet Cloud installs. It’s automatically generated if not provided when creating a notification channel. The uid allows having consistent URLs for accessing notification channels and when syncing notification channels between multiple Sofinet Cloud installations, refer to alert notification channel provisioning.\nThe uid can have a maximum length of 40 characters.",
       "name": "legacy_alerts_notification_channels"
     },
     {
-      "description": "Grafana Annotations feature released in Grafana 4.6. Annotations are saved in the Grafana database (sqlite, mysql or postgres). Annotations can be organization annotations that can be shown on any dashboard by configuring an annotation data source - they are filtered by tags. Or they can be tied to a panel on a dashboard and are then only shown on that panel.",
+      "description": "Sofinet Cloud Annotations feature released in Sofinet Cloud 4.6. Annotations are saved in the Sofinet Cloud database (sqlite, mysql or postgres). Annotations can be organization annotations that can be shown on any dashboard by configuring an annotation data source - they are filtered by tags. Or they can be tied to a panel on a dashboard and are then only shown on that panel.",
       "name": "annotations"
     },
     {
-      "description": "The identifier (ID) of a library element is an auto-incrementing numeric value that is unique per Grafana install.\nThe unique identifier (UID) of a library element uniquely identifies library elements between multiple Grafana installs. It’s automatically generated unless you specify it during library element creation. The UID provides consistent URLs for accessing library elements and when syncing library elements between multiple Grafana installs.\nThe maximum length of a UID is 40 characters.",
+      "description": "The identifier (ID) of a library element is an auto-incrementing numeric value that is unique per Sofinet Cloud install.\nThe unique identifier (UID) of a library element uniquely identifies library elements between multiple Sofinet Cloud installs. It’s automatically generated unless you specify it during library element creation. The UID provides consistent URLs for accessing library elements and when syncing library elements between multiple Sofinet Cloud installs.\nThe maximum length of a UID is 40 characters.",
       "name": "library_elements"
     },
     {
-      "description": "The identifier (ID) of a query in query history is an auto-incrementing numeric value that is unique per Grafana install.\nThe unique identifier (UID) of a query history uniquely identifies queries in query history between multiple Grafana installs. It’s automatically generated. The UID provides consistent URLs for accessing queries in query history.",
+      "description": "The identifier (ID) of a query in query history is an auto-incrementing numeric value that is unique per Sofinet Cloud install.\nThe unique identifier (UID) of a query history uniquely identifies queries in query history between multiple Sofinet Cloud installs. It’s automatically generated. The UID provides consistent URLs for accessing queries in query history.",
       "name": "query_history"
     },
     {
-      "description": "The Admin Organizations HTTP API does not currently work with an API Token. API Tokens are currently only linked to an organization and an organization role. They cannot be given the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the Grafana user must have the Grafana Admin permission (The default admin user is called `admin` and has permission to use this API).",
+      "description": "The Admin Organizations HTTP API does not currently work with an API Token. API Tokens are currently only linked to an organization and an organization role. They cannot be given the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the Sofinet Cloud user must have the Sofinet Cloud Admin permission (The default admin user is called `admin` and has permission to use this API).",
       "name": "orgs"
     },
     {
-      "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "If you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "org"
     },
     {
@@ -21563,43 +21563,43 @@
       "name": "teams"
     },
     {
-      "description": "This API can be used to enable, disable, list, add and remove permissions for a data source.\nPermissions can be set for a user or a team. Permissions cannot be set for Admins - they always have access to everything.\nThis is only available in Grafana Enterprise\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "This API can be used to enable, disable, list, add and remove permissions for a data source.\nPermissions can be set for a user or a team. Permissions cannot be set for Admins - they always have access to everything.\nThis is only available in Sofinet Cloud Enterprise\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "datasource_permissions"
     },
     {
-      "description": "These are only available in Grafana Enterprise",
+      "description": "These are only available in Sofinet Cloud Enterprise",
       "name": "enterprise"
     },
     {
-      "description": "The API can be used to create, update, get and list roles, and create or remove built-in role assignments. To use the API, you would need to enable fine-grained access control.\nThis only available in Grafana Enterprise.\nThe API does not currently work with an API Token. So in order to use these API endpoints you will have to use Basic auth.",
+      "description": "The API can be used to create, update, get and list roles, and create or remove built-in role assignments. To use the API, you would need to enable fine-grained access control.\nThis only available in Sofinet Cloud Enterprise.\nThe API does not currently work with an API Token. So in order to use these API endpoints you will have to use Basic auth.",
       "name": "access_control"
     },
     {
-      "description": "Licensing is only available in Grafana Enterprise. Read more about Grafana Enterprise.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "Licensing is only available in Sofinet Cloud Enterprise. Read more about Sofinet Cloud Enterprise.\nIf you are running Sofinet Cloud Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "licensing"
     },
     {
-      "description": "This API allows you to interact programmatically with the Reporting feature.\nReporting is only available in Grafana Enterprise. Read more about Grafana Enterprise.\nIf you have Fine-grained access Control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "This API allows you to interact programmatically with the Reporting feature.\nReporting is only available in Sofinet Cloud Enterprise. Read more about Sofinet Cloud Enterprise.\nIf you have Fine-grained access Control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "reports"
     },
     {
-      "description": "Grafana Alerting Alertmanager-compatible endpoints",
+      "description": "Sofinet Cloud Alerting Alertmanager-compatible endpoints",
       "name": "alertmanager"
     },
     {
-      "description": "Grafana Alerting endpoints for managing rules",
+      "description": "Sofinet Cloud Alerting endpoints for managing rules",
       "name": "ruler"
     },
     {
-      "description": "Grafana Alerting testing endpoints",
+      "description": "Sofinet Cloud Alerting testing endpoints",
       "name": "testing"
     },
     {
-      "description": "Grafana Alerting Prometheus-compatible endpoints",
+      "description": "Sofinet Cloud Alerting Prometheus-compatible endpoints",
       "name": "prometheus"
     },
     {
-      "description": "If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.",
+      "description": "If you are running Sofinet Cloud Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://sofinet.in/docs/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.",
       "name": "service_accounts"
     }
   ]

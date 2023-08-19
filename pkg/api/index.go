@@ -135,7 +135,7 @@ func (hs *HTTPServer) setIndexViewData(c *contextmodel.ReqContext) (*dtos.IndexV
 		AppNameBodyClass:                    "app-grafana",
 		FavIcon:                             "public/img/fav32.png",
 		AppleTouchIcon:                      "public/img/apple-touch-icon.png",
-		AppTitle:                            "Grafana",
+		AppTitle:                            "Sofinet Cloud",
 		NavTree:                             navTree,
 		Nonce:                               c.RequestNonce,
 		ContentDeliveryURL:                  hs.Cfg.GetContentDeliveryURL(hs.License.ContentDeliveryPrefix()),
